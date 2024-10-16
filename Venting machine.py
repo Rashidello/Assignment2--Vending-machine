@@ -1,4 +1,10 @@
 
+def userinput():
+	global item
+	userchoice = int(input("choose an item using their code"))
+	if userchoice in item:
+		print()
+	
 def dic():
 	item = { 
 		933 : {
@@ -45,16 +51,38 @@ def dic():
 			"Stock" : 5
 		}
 	}
-	
+
 	print("Welcome hren")
 	for keys,values in item.items():
 		print(f"Code: {values['Code']}, Item: {values['Item']}, Category: {values['Category']}, Price: {values['Price']}, Stock: {values['Stock']}")
 	fchoice = int(input("\nUser's options:\n1.Cancel\n2.Choose category:snack\n3.Choose category:drinks\n4.Choose an item\n(1-4)\n"))
 	if fchoice == 1:
-		close()
+		exit()
+	elif fchoice == 2:
+		print("")
+		for keys, values in item[767].items():
+			print(f"{keys} : {values}")
+		print("")
+		for keys, values in item[311].items():
+			print(f"{keys} : {values}")
+		print("")
+		for keys, values in item[878].items():
+			print(f"{keys} : {values}")
+		print("")
+		for keys, values in item[311].items():
+			print(f"{keys} : {values}")
+	elif fchoice == 3:
+		print("")
+		for keys,values in item[343].items():
+			print(f"{keys} : {values}")
+		print("")	
+			
+		for keys, values in item[933].items():
+			print(f"{keys} : {values}")
+		print("")
+		for keys, values in item[311].items():
+			print(f"{keys} : {values}")
 	
-
-
-
+	userinput()
 
 dic()
