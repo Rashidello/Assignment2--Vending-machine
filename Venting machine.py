@@ -1,11 +1,8 @@
 
-def userinput():
-	global item
-	userchoice = int(input("choose an item using their code"))
-	if userchoice in item:
-		print()
+
 	
 def dic():
+	global item
 	item = { 
 		933 : {
 			"Code" : 933,
@@ -51,7 +48,20 @@ def dic():
 			"Stock" : 5
 		}
 	}
+	start()
+def userinput():
+	global userchoice
 
+	userchoice = int(input("choose an item using their code "))
+	if userchoice in item:
+		print(f"you have choose {item[userchoice]['Item'.capitalize()]}, it will cost {item[userchoice]['Price'] }AED")
+		recommendations()
+	else:
+		print("it's not there:<")
+def recommendations():
+	print("works")
+
+def start():
 	print("Welcome hren")
 	for keys,values in item.items():
 		print(f"Code: {values['Code']}, Item: {values['Item']}, Category: {values['Category']}, Price: {values['Price']}, Stock: {values['Stock']}")
