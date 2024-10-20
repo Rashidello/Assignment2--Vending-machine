@@ -1,6 +1,7 @@
 #dictionary for venting machine 
 def dic():
-	global item
+	global item,additem
+	additem = 0
 	item = { 
 		933 : {
 			"Code" : 933,
@@ -119,7 +120,7 @@ def recommendations():
 		else:
 			additem = 0
 			payment()
-
+			
 	else:
 		#2:52am
 		print("You broke the system!")
@@ -128,7 +129,7 @@ def recommendations():
 def payment():
 	#global variable
 	global additem
-	#sum of two items 
+	#to check whether we have two items for total amount to pay
 	if additem > 0:
 		totalamount = item[userchoice]["Price"] + item[additem]['Price']
 
