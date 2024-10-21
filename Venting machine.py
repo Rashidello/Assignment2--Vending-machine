@@ -75,6 +75,7 @@ def userinput():
 
 def recommendations():
 	#classic
+	global additem
 	if userchoice == 933:
 		additem = input("Would you like to have some Mentos?(y/n): ")
 		if additem == 'y':
@@ -101,7 +102,7 @@ def recommendations():
 			payment()
 	elif userchoice == 209:
 		additem = input("Would you like to have some Cookie?(y/n): ")
-		if additem == 'y':
+		if additem == "y":
 			additem = 878
 			if item[additem]["Stock"] == 0:
 				print(f"Sorry we're out of {item[additem]['Item']}")
@@ -114,7 +115,7 @@ def recommendations():
 		additem = input("Would you like to have some Milk?(y/n): ")
 		if additem == 'y':
 			additem = 209
-			if item[additem]["Stock"] == 0:
+			if item[additem]['Stock'] == 0:
 				print(f"Sorry we're out of {item[additem]['Item']}")
 				additem = 0
 			payment()
@@ -133,12 +134,12 @@ def payment():
 	global additem
 	#to check whether we have two items for total amount to pay
 	if additem > 0:
-		totalamount = item[userchoice]["Price"] + item[additem]['Price']
+		totalamount = item[userchoice]['Price'] + item[additem]['Price']
 
 	else:
 		totalamount = item[userchoice]["Price"] 
 
-	userwallet = int(input(f"pay {totalamount}AED "))
+	userwallet = int(input(f"pay {totalamount} AED "))
 	#checks if user gave correct amount of money
 	if userwallet < totalamount:
 		print("Pay the required amount")
@@ -187,9 +188,6 @@ def start():
 			print(f"{keys} : {values}")
 		print("")
 		for keys, values in item[878].items():
-			print(f"{keys} : {values}")
-		print("")
-		for keys, values in item[311].items():
 			print(f"{keys} : {values}")
 		userinput()
 	elif fchoice == 3:
