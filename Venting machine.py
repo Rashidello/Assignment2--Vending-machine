@@ -1,4 +1,4 @@
-#dictionary for venting machine 
+#dictionary for vending machine 
 def dic():
 	global item,additem
 	additem = 0
