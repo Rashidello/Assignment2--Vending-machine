@@ -1,6 +1,6 @@
-# Venting-machine
+# Vending-machine
 
-### The main Idea was to create Venting machine using python programming language, with it's basic applications such as: ##
+### The main Idea was to create Vending machine using python programming language, with it's basic applications such as: ##
 * Display menu and Drinks
 * Comments that explain key operations
 * Correct change returned to a user
