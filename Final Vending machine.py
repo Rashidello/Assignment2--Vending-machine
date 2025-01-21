@@ -42,7 +42,7 @@ VMItems = {
 	},
 	"3B" : {
 		"Code" : "3B",
-		"Item" : "hot espresso",
+		"Item" : "Hot espresso",
 		"Category" : "Drink",
 		"Price" : 4,
 		"Stock" : 5,
@@ -55,13 +55,13 @@ while True:
 	if options in ["1","2", "3"]:#Error handeling if user inputs anything else than options available
 		for key,value in VMItems.items():#for loop
 			if options == '1':#if user inputs 1
-				print(f"Code : {value['Code']} || Item : {value['Item']} || Category : {value['Category']} || Price : {value['Price']} || Stock : {value['Stock']} || Related item : {value['Related item']}")#it will print out full list
+				print(f"Code : {value['Code']} || Item : {value['Item']:<18} || Category : {value['Category']} || Price : {value['Price']} || Stock : {value['Stock']} || Related item : {value['Related item']}")#it will print out full list
 
 			elif options  == "2" and value["Category"].lower() == "snack":
-				print(f"Code : {value['Code']} || Item : {value['Item']} || Category : {value['Category']} || Price : {value['Price']} || Stock : {value['Stock']} || Related item : {value['Related item']}")#will print out snacks only
+				print(f"Code : {value['Code']} || Item : {value['Item']:<17} || Category : {value['Category']} || Price : {value['Price']} || Stock : {value['Stock']} || Related item : {value['Related item']}")#will print out snacks only
 
 			elif options == '3' and value["Category"].lower() == 'drink':
-				print(f"Code : {value['Code']} || Item : {value['Item']} || Category : {value['Category']} || Price : {value['Price']} || Stock : {value['Stock']} || Related item : {value['Related item']}")#will print out drinks only
+				print(f"Code : {value['Code']} || Item : {value['Item']:<13} || Category : {value['Category']} || Price : {value['Price']} || Stock : {value['Stock']} || Related item : {value['Related item']}")#will print out drinks only
 	else:#dont touch
 		print("wrong! try again")#dont touch
 	fisrt_item = input("Enter the code of desired item: ").upper()
