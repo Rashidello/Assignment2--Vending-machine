@@ -117,7 +117,7 @@ while True:  #Infinite loop until user decides to break
         else:  #If payment is insufficient
             print("Not enough money")#prints out the message
             continue #repeat
-    repeat = input("Wanna repeat? (y/n): ").lower()  #Ask user if they want to repeat
+    repeat = input("Wanna wanna buy something again? (y/n): ").lower()  #Ask user if they want to buy again
     if repeat == 'y':  #If user chooses to repeat
         continue #repeats the program
     else:  #If user chooses to exit
